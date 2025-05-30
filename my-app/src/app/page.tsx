@@ -8,8 +8,8 @@ import FooterTop from "./_sections/footertop";
 export const UPWORK = "https://www.upwork.com/freelancers/~01b249bac3cf08ba6c";
 
 function ShowCaseImage({href}:{href: string}) {
-  return <div style={{background: `url('${href}')`}} className="h-55 !bg-cover !bg-center rounded-lg">
-
+  return <div className="h-55 border border-gray-600 border-dashed p-1 rounded-lg">
+    <div style={{background: `url('${href}')`}} className="!bg-cover !bg-top-center w-full h-full rounded-sm"></div>
   </div>
 }
 
@@ -56,8 +56,8 @@ export default function Home() {
           </div>
           <p className="text-center text-lg mb-8 max-w-[1200px] mx-auto">A curated selection of my recent frontend projects — blending creative visuals with smooth interactions. Each work reflects my focus on user experience, performance, and modern web technologies.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5">
-            <ShowCaseSoon/>
-            <ShowCaseSoon/>
+            <ShowCaseImage href="/showcase/csrip.webp"/>
+            <ShowCaseImage href="/showcase/mezganet.webp"/>
             <ShowCaseSoon/>
           </div>
       </div>
