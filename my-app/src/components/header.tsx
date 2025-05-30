@@ -1,5 +1,6 @@
 "use client";
 
+import { UPWORK } from "@/app/page";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -29,9 +30,9 @@ export default function Header() {
                 </div>
                 <div className="hidden md:flex gap-5">
                     <div className="flex items-center gap-4">
-                        <HeaderButton href="https://example.com">Example #1</HeaderButton>
-                        <HeaderButton href="https://example.com">Example #2</HeaderButton>
-                        <HeaderButton href="https://example.com">Example #3</HeaderButton>
+                        <HeaderButton href="https://matex.hu">Social Media</HeaderButton>
+                        <HeaderButton href={UPWORK}>Upwork</HeaderButton>
+                        <HeaderButton href="https://dc.matex.hu">Discord</HeaderButton>
                     </div>
                     <Link className="bg-blue-600 py-1 px-3 text-white hover:bg-blue-700 rounded-md flex items-center gap-2" href={"https://github.com/meszmate/portfolio"}>
                         Source Code
@@ -52,9 +53,9 @@ export default function Header() {
                 })}
             </div> 
             <div className="grid gap-3 mt-7">
-                <DropButton href="#" value={drop} className="">Example #1</DropButton>
-                <DropButton href="#" value={drop} className="delay-100">Example #2</DropButton>
-                <DropButton href="#" value={drop} className="delay-200">Example #3</DropButton>
+                <DropButton href="https://matex.hu" value={drop} className="">Social Media</DropButton>
+                <DropButton href={UPWORK} value={drop} className="delay-100">Upwork</DropButton>
+                <DropButton href="https://dc.matex.hu" value={drop} className="delay-200">Discord</DropButton>
                 <DropButton href="https://github.com/meszmate/portfolio" value={drop} className="delay-300 !bg-blue-200 !text-blue-900">Source Code</DropButton>
             </div>
         </div>

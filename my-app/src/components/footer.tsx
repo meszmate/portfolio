@@ -1,3 +1,4 @@
+import { UPWORK } from "@/app/page";
 import Image from "next/image";
 import Link from "next/link";
 import { RiBracesLine } from "react-icons/ri";
@@ -23,16 +24,17 @@ export default function Footer() {
                         <img src="https://matex.hu/logo.jpg" className="h-8 me-3 rounded-full" alt="" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Mate M.</span>
                     </a>
+                    <p className="text-gray-400 mt-4">business@meszmate.hu</p>
                 </div>
                 <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                     <div>
                         <MiniTitle>Resources</MiniTitle>
                         <ul className="text-gray-500 dark:text-gray-400 font-medium">
                             <li className="mb-4">
-                                <Link href="#" className="hover:underline">Link #1</Link>
+                                <Link href="https://matex.hu" className="hover:underline">Social Media</Link>
                             </li>
                             <li>
-                                <Link href="#" className="hover:underline">Link #2</Link>
+                                <Link href="https://dc.matex.hu" className="hover:underline">Discord</Link>
                             </li>
                         </ul>
                     </div>
@@ -43,7 +45,7 @@ export default function Footer() {
                                 <Link href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</Link>
                             </li>
                             <li>
-                                <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</Link>
+                                <Link href={UPWORK} className="hover:underline">Upwork</Link>
                             </li>
                         </ul>
                     </div>
