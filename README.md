@@ -1,1 +1,2 @@
+- check out meszmate: [meszmate.com](https://meszmate.com)
 - check out my-app: [meszmate.hu](https://meszmate.hu)
