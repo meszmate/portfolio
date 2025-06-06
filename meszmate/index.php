@@ -27,6 +27,67 @@ $WORKS = [
         "url"=>"https://meszmate.hu",
     ]
 ];
+$FEATURES = [
+    [
+        "icon"=>"ri-seo-line",
+        "title"=>"SEO Compatibility",
+        "description"=>"Structured to help you rank better on Google from day one."
+    ],
+    [
+        "icon"=>"ri-smartphone-line",
+        "title"=>"Mobile-friendly",
+        "description"=>"Looks great and works perfectly on all devices."
+    ],
+    [
+        "icon"=>"ri-expand-diagonal-2-line",
+        "title"=>"Scalable",
+        "description"=>"Easily grow and add features as your business expands."
+    ],
+    [
+        "icon"=>"ri-customer-service-line",
+        "title"=>"Ongoing support",
+        "description"=>"I’m here to help at any time, especially when you choose the montly package."
+    ],
+    [
+        "icon"=>"ri-box-3-line",
+        "title"=>"Flexible monthly packages",
+        "description"=>"Get expert support and updates without a huge upfront cost."
+    ],
+    [
+        "icon"=>"ri-shield-check-line",
+        "title"=>"Better security",
+        "description"=>"No bloated plugins or unnecessary third-party code."
+    ],
+    [
+        "icon"=>"ri-flashlight-line",
+        "title"=>"Lightning-fast loading",
+        "description"=>"Built with only what you need, nothing that slows it down."
+    ],
+    [
+        "icon"=>"ri-equalizer-line",
+        "title"=>"Full control",
+        "description"=>"You decide how it looks, works, and evolves."
+    ]
+];
+
+$SOCIALS = [
+    [
+        "icon"=>"ri-instagram-line",
+        "url"=>$INSTAGRAM,
+    ],
+    [
+        "icon"=>"ri-twitter-x-line",
+        "url"=>$X,
+    ],
+    [
+        "icon"=>"ri-github-fill",
+        "url"=>$GITHUB,
+    ],
+    [
+        "icon"=>"ri-discord-fill",
+        "url"=>$DISCORD,
+    ]
+];
 
 ?>
 <!DOCTYPE html>
@@ -39,6 +100,10 @@ $WORKS = [
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://api.fontshare.com/v2/css?f[]=outfit@700&display=swap" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
     <style>
         .font-base {
             font-family: 'Outfit', sans-serif;
@@ -51,7 +116,7 @@ $WORKS = [
         <div class="absolute -bottom-20 left-1/2 w-[500px] h-[500px] bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
         <div class="absolute top-20 right-10 w-[300px] h-[300px] bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
         <nav class="w-full py-4 px-4">
-            <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="max-w-[1500px] mx-auto flex justify-between items-center">
                 <div class="flex gap-5 items-center">
                     <img src="https://matex.hu/logo.jpg" class="w-8 h-8 rounded-full" alt="">
                     <h1 class="font-bold text-gray-700">Matthew Meszaros</h1>
@@ -64,7 +129,7 @@ $WORKS = [
             </div>
         </nav>
         <div class="pt-34 pb-50 px-4">
-            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-y-15">
+            <div class="max-w-[1500px] mx-auto grid md:grid-cols-2 gap-y-15">
                 <div class="md:pr-12 flex flex-col justify-center">
                     <h1 class="font-base text-5xl sm:text-7xl text-gray-900 tracking-wider leading-17 sm:leading-23">High Quality, Modern Website Design</h1>
                     <p class="mt-9 text-xl text-gray-700">
@@ -80,8 +145,8 @@ $WORKS = [
             </div>
         </div>
     </section>
-    <section class="relative overflow-hidden bg-slate-50 py-10 px-4">
-        <div class="max-w-7xl mx-auto">
+    <section class="relative overflow-hidden bg-slate-50 py-17 px-4">
+        <div class="max-w-[1500px] mx-auto">
             <div class="flex items-center gap-5">
                 <h1 class="font-bold text-xl text-slate-600">My works</h1>
                 <div class="w-1.5 h-1.5 bg-slate-500 rounded-full"></div>
@@ -99,6 +164,31 @@ $WORKS = [
                 <?php endforeach; ?>
             </div>
             <div class="h-[1px] w-full bg-slate-200 my-20"></div>
+            <div class="flex flex-col items-center">
+                <h1 class="text-center font-semibold text-5xl bg-gradient-to-r from-blue-500 via-indigo-400 to-indigo-500 inline-block text-transparent bg-clip-text font-sans">Custom-builded Website</h1>
+                <p class="text-center max-w-3xl text-lg mt-12 mb-20 text-gray-700">A custom-built website does exactly what you need – without the clutter. It's faster, cleaner, and reflects your brand better than a generic template.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-10">
+                <?php foreach($FEATURES as $feature): ?>
+                    <div class="bg-">
+                        <div class="mb-5 bg-blue-200 w-fit py-3 px-5 rounded-xl text-xl">
+                            <i class="<?php echo $feature["icon"] ?>"></i>
+                        </div>
+                        <h1 class="font-bold text-xl mb-3 text-gray-800"><?php echo $feature["title"] ?></h1>
+                        <p class="text-gray-700"><?php echo $feature["description"] ?></p>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <section class="relative overflow-hidden bg-slate-950 py-35 px-4">
+        <div class="max-w-[1500px] mx-auto">
+            <h1 class="text-5xl font-bold text-slate-200 text-center mb-10">Powered by Proven Technology</h1>
+            <p class="text-slate-500 text-lg text-center">No gimmicks, no shortcuts. Just clean, professional code using the same tools that power the web’s most successful sites.</p>
+        </div>
+    </section>
+    <section class="relative overflow-hidden bg-slate-50 py-17 px-4">
+        <div class="max-w-[1500px] mx-auto">
             <div class="flex flex-col md:flex-row gap-10">
                 <div class="max-w-[400px] flex gap-10">
                     <h1 class="text-5xl font-black">Let's Work Together.</h1>
@@ -115,11 +205,17 @@ $WORKS = [
         </div>
     </section>  
     <section class="bg-slate-200 py-5 px-4">
-        <div class="max-w-7xl mx-auto flex justify-between">
+        <div class="max-w-[1500px] mx-auto flex justify-between items-center">
             <div>
                 <p class="text-slate-500 text-sm"><?php echo date("Y") ?> &copy; meszmate.com</p>
             </div>
-            <div></div>
+            <div class="flex gap-4">
+                <?php foreach ($SOCIALS as $social): ?>
+                    <a class="text-lg text-gray-700 hover:opacity-70" href="<?php echo $social["url"] ?>">
+                        <i class="<?php echo $social["icon"]?>"></i>
+                    </a>
+                <?php endforeach; ?>
+            </div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
