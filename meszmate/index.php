@@ -168,9 +168,9 @@ $SOCIALS = [
                 <h1 class="text-center font-semibold text-5xl bg-gradient-to-r from-blue-500 via-indigo-400 to-indigo-500 inline-block text-transparent bg-clip-text font-sans">Custom-builded Website</h1>
                 <p class="text-center max-w-3xl text-lg mt-12 mb-20 text-gray-700">A custom-built website does exactly what you need – without the clutter. It's faster, cleaner, and reflects your brand better than a generic template.</p>
             </div>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-10">
+            <div id="features" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-10">
                 <?php foreach($FEATURES as $feature): ?>
-                    <div class="bg-">
+                    <div class="feature">
                         <div class="mb-5 bg-blue-200 w-fit py-3 px-5 rounded-xl text-xl">
                             <i class="<?php echo $feature["icon"] ?>"></i>
                         </div>
@@ -183,7 +183,7 @@ $SOCIALS = [
     </section>
     <section class="relative overflow-hidden bg-slate-950 py-35 px-4">
         <div class="max-w-[1500px] mx-auto">
-            <h1 class="text-5xl font-bold text-slate-200 text-center mb-10">Powered by Proven Technology</h1>
+            <h1 id="powered" class="text-5xl font-bold text-slate-200 text-center mb-10">Powered by Proven Technology</h1>
             <p class="text-slate-500 text-lg text-center">No gimmicks, no shortcuts. Just clean, professional code using the same tools that power the web’s most successful sites.</p>
         </div>
     </section>
@@ -191,15 +191,15 @@ $SOCIALS = [
         <div class="max-w-[1500px] mx-auto">
             <div class="flex flex-col md:flex-row gap-10">
                 <div class="max-w-[400px] flex gap-10">
-                    <h1 class="text-5xl font-black">Let's Work Together.</h1>
+                    <h1 id="work" class="text-5xl font-black">Let's Work Together.</h1>
                 </div>
                 <div class="flex flex-col gap-4 grow">
-                    <h1 class="text-slate-800 font-bold text-lg">Send Me an Email</h1>
-                    <p class="text-slate-600">Reach out at <a class="text-blue-600 hover:underline" href="mailto:contact@meszmate.com">contact@meszmate.com</a> with a description of your project or idea. The more details, the better!</p>
-                    <h1 class="text-slate-800 font-bold text-lg mt-9">Let’s Connect</h1>
-                    <p class="text-slate-600">I'll follow up with information on how we can discuss everything.</p>
-                    <h1 class="text-slate-800 font-bold text-lg mt-9">Pricing</h1>
-                    <p class="text-slate-600">Projects typically range from $500 to $3000, depending on your needs, complexity, and whether you already have a design or just an idea.</p>
+                    <h1 class="text-slate-800 font-bold text-lg step">Send Me an Email</h1>
+                    <p class="text-slate-600 step">Reach out at <a class="text-blue-600 hover:underline" href="mailto:contact@meszmate.com">contact@meszmate.com</a> with a description of your project or idea. The more details, the better!</p>
+                    <h1 class="text-slate-800 font-bold text-lg mt-9 step">Let’s Connect</h1>
+                    <p class="text-slate-600 step">I'll follow up with information on how we can discuss everything.</p>
+                    <h1 class="text-slate-800 font-bold text-lg mt-9 step">Pricing</h1>
+                    <p class="text-slate-600 step">Projects typically range from $500 to $3000, depending on your needs, complexity, and whether you already have a design or just an idea.</p>
                 </div>
             </div>
         </div>
@@ -220,6 +220,7 @@ $SOCIALS = [
     </section>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
